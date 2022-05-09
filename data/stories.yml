@@ -1,0 +1,65 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: hi_mood_great
+  - action: utter_hi_happy
+  - intent: hi_goodbye
+  - action: utter_hi_goodbye
+  - intent: hi_bot_challenge
+  - action: utter_hi_iamabot
+  - intent: hi_greet
+  - action: utter_hi_greet
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: hi_mood_unhappy
+  - action: utter_hi_cheer_up
+  - action: utter_hi_did_that_help
+  - intent: hi_affirm
+  - action: utter_hi_happy
+  - intent: hi_goodbye
+  - action: utter_hi_goodbye
+  - intent: hi_bot_challenge
+  - action: utter_hi_iamabot
+  - intent: hi_greet
+  - action: utter_hi_greet
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+  - intent: hi_deny
+  - action: utter_hi_goodbye
+  - intent: hi_mood_unhappy
+  - action: utter_hi_cheer_up
+  - action: utter_hi_did_that_help
+  - intent: hi_goodbye
+  - action: utter_hi_goodbye
+  - intent: hi_bot_challenge
+  - action: utter_hi_iamabot
+  - intent: hi_greet
+  - action: utter_hi_greet
+
+- story: corona tracker path
+  steps:
+  - intent: corona_state
+  - action: action_corona_state

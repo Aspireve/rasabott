@@ -1,0 +1,67 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - corona_state
+  - hi_greet
+  - hi_goodbye
+  - hi_affirm
+  - hi_deny
+  - hi_mood_great
+  - hi_mood_unhappy
+  - hi_bot_challenge
+
+actions:
+  - action_corona_state
+
+entities:
+  - state
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_hi_greet:
+  - text: "अरे! क्या हाल है?   [aree kya haal hai!!]"
+
+  utter_hi_cheer_up:
+  - text: "यहाँ आपको खुश करने के लिए कुछ है:  [yeh aapko khush rakhne ka liyea hai]"   
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_hi_did_that_help:
+  - text: "क्या इससे आपको मदद मिली?    [kya isse aapko madad mili]"
+
+  utter_hi_happy:
+  - text: "बढ़िया!  [Badhia!!]"
+
+  utter_hi_goodbye:
+  - text: "अलविदा!!    [Alvida!!]"
+
+  utter_hi_iamabot:
+  - text: "मैं एक रोबोट हूं.   [Mein ek robot hun]"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

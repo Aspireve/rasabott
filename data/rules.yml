@@ -1,0 +1,43 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say goodbye anytime the user says goodbye in Hindi
+  steps:
+  - intent: hi_goodbye
+  - action: utter_hi_goodbye
+
+- rule: Say hello in Hindi
+  steps:
+  - intent: hi_greet
+  - action: utter_hi_greet
+
+- rule: Say good greating in Hindi
+  steps:
+  - intent: hi_mood_great
+  - action: utter_hi_happy
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say 'I am a bot' anytime the user challenges in Hindi
+  steps:
+  - intent: hi_bot_challenge
+  - action: utter_hi_iamabot
+
+- rule: Say 'I am a bot' anytime the user challenges in Hindi
+  steps:
+  - intent: hi_mood_unhappy
+  - action: utter_hi_cheer_up
+  - action: utter_hi_did_that_help
+
+
+
+
